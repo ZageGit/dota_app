@@ -7,6 +7,7 @@ Things to add
 husky git hooks
 unit tests
 proper backend
+linter
 ```
 
 ## Development server
