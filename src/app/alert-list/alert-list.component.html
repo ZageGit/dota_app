@@ -1,0 +1,4 @@
+<div class="container">
+    <button (click)="newAlert()">New alert</button>
+    <app-alert-card *ngFor="let alert of (alerts$ |async)" [alert]="alert"></app-alert-card>
+</div>

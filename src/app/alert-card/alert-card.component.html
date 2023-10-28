@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{alert.name}}</h5>
+      <p>Time: {{alert.time}}</p>
+      <p>Description: {{alert.description}}</p>
+    </div>
+    <button class="btn btn-outline-warning" (click)="removeAlert(alert.id)">Remove</button>
+  </div>
