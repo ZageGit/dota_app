@@ -37,7 +37,6 @@ export class HeroStateModel{
     getHeroList(ctx: StateContext<HeroStateModel>):void {
       this.heroService.getHeroList().subscribe((response)=>{
         ctx.patchState({heroes:response})
-        console.log(ctx.getState())
       })
     }
 

@@ -7,6 +7,7 @@ import { Alert } from '../../../models/alert';
 import { NewAlertDialogComponent } from '../new-alert-dialog/new-alert-dialog.component';
 import { GetAlertsAction, SetAlertsAction } from './store/alert.actions';
 import { AlertState } from './store/alert.state';
+import { GetHeroesAction } from '../../heroes/hero-list/store/hero.actions';
 
 
 
@@ -21,8 +22,8 @@ export class AlertListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.store.dispatch(new SetAlertsAction(mockAlerts))
    this.store.dispatch(new GetAlertsAction())
+   this.store.dispatch(new GetHeroesAction())
   }
 
   public newAlert(){

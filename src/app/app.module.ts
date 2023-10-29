@@ -21,6 +21,7 @@ import { HeroState } from './features/heroes/hero-list/store/hero.state';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewAlertDialogComponent } from './features/alerts/new-alert-dialog/new-alert-dialog.component';
 import { PinnedHeroesComponent } from './features/heroes/pinned-heroes/pinned-heroes.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { PinnedHeroesComponent } from './features/heroes/pinned-heroes/pinned-he
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
