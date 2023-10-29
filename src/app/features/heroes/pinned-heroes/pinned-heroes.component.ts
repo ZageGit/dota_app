@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Select } from '@ngxs/store';
-import { HeroState } from '../hero-list/store/hero.state';
+import { HeroState } from '../store/hero.state';
 import { Observable } from 'rxjs';
 import { Hero } from 'src/app/models/hero';
 

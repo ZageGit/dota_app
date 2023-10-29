@@ -1,4 +1,4 @@
-import { Alert } from "../../../../models/alert";
+import { Alert } from "../../../models/alert";
 
 
 export class GetAlertsAction {

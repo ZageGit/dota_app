@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { Hero } from '../../../models/hero';
-import { AddPinnedHeroAction, RemovePinnedHeroAction } from '../hero-list/store/hero.actions';
+import { AddPinnedHeroAction, RemovePinnedHeroAction } from '../store/hero.actions';
 
 @Component({
   selector: 'app-hero-card',

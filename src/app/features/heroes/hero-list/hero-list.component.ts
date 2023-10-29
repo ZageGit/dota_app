@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { Hero } from '../../../models/hero';
-import { GetHeroesAction } from './store/hero.actions';
-import { HeroState } from './store/hero.state';
+import { GetHeroesAction } from '../store/hero.actions';
+import { HeroState } from '../store/hero.state';
 
 @Component({
   selector: 'app-hero-list',

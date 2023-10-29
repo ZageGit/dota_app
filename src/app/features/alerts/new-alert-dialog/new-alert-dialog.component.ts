@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Select, Store } from '@ngxs/store';
-import { AddAlertAction } from '../alert-list/store/alert.actions';
-import { HeroState } from '../../heroes/hero-list/store/hero.state';
+import { AddAlertAction } from '../store/alert.actions';
+import { HeroState } from '../../heroes/store/hero.state';
 import { Observable } from 'rxjs';
 import { Hero } from 'src/app/models/hero';
 

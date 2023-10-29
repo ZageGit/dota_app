@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
-import { Hero } from '../../../../models/hero';
-import { HeroService } from '../../../../services/hero.service';
+import { Hero } from '../../../models/hero';
+import { HeroService } from '../../../services/hero.service';
 import { AddPinnedHeroAction, GetHeroesAction, RemovePinnedHeroAction } from './hero.actions';
 import { patch, removeItem } from '@ngxs/store/operators';
 import { mockPinnedHeroes } from 'src/app/mockData/mockPinnedHeroes';
