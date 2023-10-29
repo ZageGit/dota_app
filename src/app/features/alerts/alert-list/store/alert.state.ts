@@ -3,6 +3,7 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { patch, removeItem } from '@ngxs/store/operators';
 import { Alert } from '../../../../models/alert';
 import { AddAlertAction, RemoveAlertAction, SetAlertsAction } from './alert.actions';
+import { mockAlerts } from 'src/app/mockData/mockAlerts';
 
 
 
@@ -13,7 +14,7 @@ export class AlertStateModel{
 @State<AlertStateModel>({
     name: 'alerts',
     defaults:{
-        alerts: []
+        alerts: mockAlerts
     }
   })  
 

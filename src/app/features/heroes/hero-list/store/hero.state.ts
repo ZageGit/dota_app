@@ -4,6 +4,7 @@ import { Hero } from '../../../../models/hero';
 import { HeroService } from '../../../../services/hero.service';
 import { AddPinnedHeroAction, GetHeroesAction, RemovePinnedHeroAction } from './hero.actions';
 import { patch, removeItem } from '@ngxs/store/operators';
+import { mockPinnedHeroes } from 'src/app/mockData/mockPinnedHeroes';
 
 
 export class HeroStateModel{
@@ -15,7 +16,7 @@ export class HeroStateModel{
     name: 'heroes',
     defaults:{
         heroes: [],
-        pinnedHeroes: []
+        pinnedHeroes: mockPinnedHeroes
     }
   })  
 
