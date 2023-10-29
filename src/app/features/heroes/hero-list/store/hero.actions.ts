@@ -5,7 +5,12 @@ export class GetHeroesAction {
     constructor() {}
   }
 
-  export class PatchStateAction {
-    static readonly type = '[Hero] patch';
-    constructor(public payload: Hero[]) {}
+  export class AddPinnedHeroAction {
+    static readonly type = '[Hero] Pin hero'
+    constructor(public payload: Hero) {}
+  }
+
+  export class RemovePinnedHeroAction {
+    static readonly type = '[Hero] Remove pinned hero'
+    constructor(public payload: number) {}
   }

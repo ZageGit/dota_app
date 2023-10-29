@@ -1,0 +1,5 @@
+<div class="container">
+    <div class="row">
+        <app-hero-card class="col-sm" *ngFor="let hero of (pinnedHeroes$ |async)" [hero]="hero" [context]="'pinnedList'"></app-hero-card> 
+    </div>
+</div>

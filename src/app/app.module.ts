@@ -20,6 +20,7 @@ import { HeroListComponent } from './features/heroes/hero-list/hero-list.compone
 import { HeroState } from './features/heroes/hero-list/store/hero.state';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewAlertDialogComponent } from './new-alert-dialog/new-alert-dialog.component';
+import { PinnedHeroesComponent } from './features/heroes/pinned-heroes/pinned-heroes.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NewAlertDialogComponent } from './new-alert-dialog/new-alert-dialog.com
     HeroCardComponent,
     AlertListComponent,
     AlertCardComponent,
-    NewAlertDialogComponent
+    NewAlertDialogComponent,
+    PinnedHeroesComponent
   ],
   imports: [
     BrowserModule,

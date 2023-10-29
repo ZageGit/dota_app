@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Store } from '@ngxs/store';
 import { Hero } from '../../../models/hero';
+import { AddPinnedHeroAction, RemovePinnedHeroAction } from '../hero-list/store/hero.actions';
 
 @Component({
   selector: 'app-hero-card',
@@ -8,9 +10,19 @@ import { Hero } from '../../../models/hero';
 })
 export class HeroCardComponent implements OnInit {
   @Input() hero!: Hero;
-  constructor() { }
+  @Input() context!: string;
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
   }
+
+  public addPinnedHero(hero:Hero){
+this.store.dispatch(new AddPinnedHeroAction(hero))
+  }
+
+  public removePinnedHero(id:number){
+    this.store.dispatch(new RemovePinnedHeroAction(id))
+      }
+    
 
 }
