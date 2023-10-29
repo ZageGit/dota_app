@@ -19,7 +19,7 @@ import { HeroCardComponent } from './features/heroes/hero-card/hero-card.compone
 import { HeroListComponent } from './features/heroes/hero-list/hero-list.component';
 import { HeroState } from './features/heroes/hero-list/store/hero.state';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NewAlertDialogComponent } from './new-alert-dialog/new-alert-dialog.component';
+import { NewAlertDialogComponent } from './features/alerts/new-alert-dialog/new-alert-dialog.component';
 import { PinnedHeroesComponent } from './features/heroes/pinned-heroes/pinned-heroes.component';
 
 @NgModule({

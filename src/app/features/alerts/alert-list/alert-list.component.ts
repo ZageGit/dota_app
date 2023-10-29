@@ -4,7 +4,7 @@ import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { mockAlerts } from '../../../mockData/mockAlerts';
 import { Alert } from '../../../models/alert';
-import { NewAlertDialogComponent } from '../../../new-alert-dialog/new-alert-dialog.component';
+import { NewAlertDialogComponent } from '../new-alert-dialog/new-alert-dialog.component';
 import { GetAlertsAction, SetAlertsAction } from './store/alert.actions';
 import { AlertState } from './store/alert.state';
 

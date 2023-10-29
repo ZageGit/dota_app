@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Store } from '@ngxs/store';
-import { AddAlertAction } from '../features/alerts/alert-list/store/alert.actions';
+import { AddAlertAction } from '../alert-list/store/alert.actions';
 
 
 @Component({
