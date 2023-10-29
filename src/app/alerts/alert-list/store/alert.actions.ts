@@ -1,4 +1,5 @@
-import { Alert } from "src/app/models/alert";
+import { Alert } from "../../../models/alert";
+
 
 export class GetAlertsAction {
     static readonly type = '[Alert] Get alerts';
@@ -13,4 +14,9 @@ export class AddAlertAction {
   export class RemoveAlertAction {
     static readonly type = '[Alert] Remove alerts';
     constructor(public payload: string) {}
+  }
+
+  export class SetAlertsAction {
+    static readonly type = '[Alert] Set alerts';
+    constructor(public payload: Alert[]) {}
   }

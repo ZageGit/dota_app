@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Action, Selector, State, StateContext} from '@ngxs/store';
-import { Alert } from 'src/app/models/alert';
-import { AddAlertAction, RemoveAlertAction } from './alert.actions';
+import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { patch, removeItem } from '@ngxs/store/operators';
-import { mockAlerts } from 'src/app/mockData/mockAlerts';
+import { Alert } from '../../../models/alert';
+import { AddAlertAction, RemoveAlertAction, SetAlertsAction } from './alert.actions';
 
 
 
@@ -14,7 +13,7 @@ export class AlertStateModel{
 @State<AlertStateModel>({
     name: 'alerts',
     defaults:{
-        alerts: mockAlerts
+        alerts: []
     }
   })  
 
@@ -37,7 +36,6 @@ export class AlertStateModel{
                 action.payload
             ]
           });
-          console.log(ctx.getState())
     }
     
     @Action(RemoveAlertAction)
@@ -47,6 +45,11 @@ export class AlertStateModel{
               alerts: removeItem<Alert>((alert) => alert.id === action.payload),
             })
           );
-          console.log(ctx.getState())
     }
+
+    @Action(SetAlertsAction)
+    setAlerts(ctx: StateContext<AlertStateModel>, action: SetAlertsAction):void {
+      ctx.patchState({alerts: action.payload})
+    }
+
   }

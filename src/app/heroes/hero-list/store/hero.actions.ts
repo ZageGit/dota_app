@@ -1,4 +1,4 @@
-import { Hero } from "src/app/models/hero";
+import { Hero } from "../../../models/hero";
 
 export class GetHeroesAction {
     static readonly type = '[Hero] Get heroes';

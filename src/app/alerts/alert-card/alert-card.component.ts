@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Alert } from '../models/alert';
+import { MatDialog } from '@angular/material/dialog';
 import { Store } from '@ngxs/store';
 import { RemoveAlertAction } from '../alert-list/store/alert.actions';
-import { MatDialog } from '@angular/material/dialog';
+import { Alert } from '../../models/alert';
 
 @Component({
   selector: 'app-alert-card',
