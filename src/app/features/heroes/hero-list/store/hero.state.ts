@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
-import { HeroService } from '../../../services/hero.service';
+import { Hero } from '../../../../models/hero';
+import { HeroService } from '../../../../services/hero.service';
 import { GetHeroesAction } from './hero.actions';
-import { Hero} from '../../../models/hero';
 
 
 export class HeroStateModel{

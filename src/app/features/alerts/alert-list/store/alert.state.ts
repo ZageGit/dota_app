@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { patch, removeItem } from '@ngxs/store/operators';
-import { Alert } from '../../../models/alert';
+import { Alert } from '../../../../models/alert';
 import { AddAlertAction, RemoveAlertAction, SetAlertsAction } from './alert.actions';
 
 
