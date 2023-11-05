@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
@@ -18,6 +18,9 @@ import { GetHeroesAction } from '../../heroes/store/hero.actions';
 })
 export class AlertListComponent implements OnInit {
   @Select(AlertState.alerts) alerts$!: Observable<Alert[]>;
+
+  @Input() alertsforHero!: Alert[];
+  
   constructor(private store: Store, private dialog: MatDialog) { }
 
 

@@ -2,6 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { Hero } from '../../../models/hero';
 import { AddPinnedHeroAction, RemovePinnedHeroAction } from '../store/hero.actions';
+import { ShowAlertsForHeroAction } from '../../alerts/store/alert.actions';
+import { MatDialog } from '@angular/material/dialog';
+import { AlertListComponent } from '../../alerts/alert-list/alert-list.component';
 
 @Component({
   selector: 'app-hero-card',
@@ -11,7 +14,7 @@ import { AddPinnedHeroAction, RemovePinnedHeroAction } from '../store/hero.actio
 export class HeroCardComponent implements OnInit {
   @Input() hero!: Hero;
   @Input() context!: string;
-  constructor(private store: Store) { }
+  constructor(private store: Store, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -24,5 +27,9 @@ this.store.dispatch(new AddPinnedHeroAction(hero))
     this.store.dispatch(new RemovePinnedHeroAction(id))
       }
     
+  public showAlerts(id: number){
+    this.store.dispatch(new ShowAlertsForHeroAction(id))
+    this.dialog.open(AlertListComponent)
+  }
 
 }

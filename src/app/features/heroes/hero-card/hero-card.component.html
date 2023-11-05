@@ -3,6 +3,7 @@
       <h5 class="card-title">{{hero.localized_name}}</h5>
       <p>Roles: <span *ngFor="let role of hero.roles" > {{role}}</span></p>
     </div>
-    <button class="btn btn-outline-success" (click)="addPinnedHero(hero)">Pin hero</button>
+    <button class="btn btn-outline-success"*ngIf="context === 'allHeroList'"(click)="addPinnedHero(hero)">Pin hero</button>
     <button class="btn btn-outline-danger" *ngIf="context === 'pinnedList'" (click)="removePinnedHero(hero.id)">Remove hero</button>
+    <button class="btn btn-outline-danger" *ngIf="context === 'pinnedList'" (click)="showAlerts(hero.id)">Show alerts</button>
   </div>

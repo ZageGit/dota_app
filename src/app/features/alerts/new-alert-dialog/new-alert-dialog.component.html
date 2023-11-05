@@ -1,34 +1,61 @@
-<h1 mat-dialog-title>Hi</h1>
-<div mat-dialog-content>
-  <form [formGroup]="newAlertForm">
-    <label for="id">Id: </label>
-    <input id="id" type="text" formControlName="id" required />
+<h2 mat-dialog-title>Add alert</h2>
+<mat-dialog-content>
+  <form class="new-alert-form" [formGroup]="newAlertForm">
+    <div>
+      <mat-form-field>
+        <mat-label for="id">Id: </mat-label>
+        <input matInput id="id" type="text" formControlName="id" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label for="name">Name: </mat-label>
+        <input matInput id="name" type="text" formControlName="name" required />
+      </mat-form-field>
+    </div>
 
-    <label for="name">Name: </label>
-    <input id="name" type="text" formControlName="name" required />
+    <div>
+      <mat-form-field>
+        <mat-label for="description">Description: </mat-label>
+        <input
+          matInput
+          id="description"
+          type="text"
+          formControlName="description"
+          required
+        />
+      </mat-form-field>
+    </div>
 
-    <label for="description">Description: </label>
-    <input
-      id="description"
-      type="text"
-      formControlName="description"
-      required
-    />
-
-    <label for="time">Time: </label>
-    <input id="time" type="text" formControlName="time" required />
-
-    <mat-label for="hero">hero</mat-label>
-    <mat-select id="hero" formControlName="hero" required>
-      <mat-option *ngFor="let hero of (heroes$ | async)" [value]="hero">
-        {{ hero.localized_name }}
-      </mat-option>
-    </mat-select>
+    <div>
+      <mat-form-field>
+        <mat-label for="time">Time: </mat-label>
+        <input matInput id="time" type="text" formControlName="time" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label for="hero">Hero</mat-label>
+        <mat-select id="hero" formControlName="hero" required>
+          <mat-option *ngFor="let hero of heroes$ | async" [value]="hero">
+            {{ hero.localized_name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
   </form>
-  <div mat-dialog-actions>
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button [disabled]="!newAlertForm.valid" (click)="addAlert()">
+
+  <mat-dialog-actions>
+    <button mat-raised-button color="warn" mat-button mat-dialog-close>
+      Cancel
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!newAlertForm.valid"
+      (click)="addAlert()"
+    >
       Ok
     </button>
-  </div>
-</div>
+  </mat-dialog-actions>
+</mat-dialog-content>

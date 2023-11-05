@@ -16,7 +16,7 @@ export class HeroStateModel{
     name: 'heroes',
     defaults:{
         heroes: [],
-        pinnedHeroes: mockPinnedHeroes
+        pinnedHeroes: []
     }
   })  
 
@@ -42,7 +42,7 @@ export class HeroStateModel{
     }
 
     @Action(AddPinnedHeroAction)
-    addAlert(ctx: StateContext<HeroStateModel>, action: AddPinnedHeroAction):void {
+    addPinnedHero(ctx: StateContext<HeroStateModel>, action: AddPinnedHeroAction):void {
         const state = ctx.getState()
         ctx.setState({
             ...state,
@@ -55,9 +55,11 @@ export class HeroStateModel{
 
     @Action(RemovePinnedHeroAction)
     removeAlert(ctx: StateContext<HeroStateModel>, action: RemovePinnedHeroAction):void {
+      const state = ctx.getState()
+      const filteredState = state.pinnedHeroes.filter(hero => hero.id !== action.payload)
         ctx.setState(
             patch({
-              pinnedHeroes: removeItem<Hero>((hero) => hero.id === action.payload),
+              pinnedHeroes: filteredState,
             })
           );
     }

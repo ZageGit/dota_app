@@ -1,5 +1,5 @@
 <div class="container">
     <div class="row">
-        <app-hero-card class="col-sm" *ngFor="let hero of (heroes$ |async)" [hero]="hero"></app-hero-card> 
+        <app-hero-card class="col-sm" *ngFor="let hero of (heroes$ |async)" [context]="'allHeroList'"  [hero]="hero"></app-hero-card> 
     </div>
 </div>

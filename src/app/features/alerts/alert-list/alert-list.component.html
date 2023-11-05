@@ -1,4 +1,7 @@
 <div class="container">
     <button (click)="newAlert()">New alert</button>
     <app-alert-card *ngFor="let alert of (alerts$ |async)" [alert]="alert"></app-alert-card>
+    <!-- <ng-container *ngIf="alertsforHero.length">
+        <app-alert-card  *ngFor="let alert of alertsforHero" [alert]="alert"></app-alert-card>
+    </ng-container> -->
 </div>

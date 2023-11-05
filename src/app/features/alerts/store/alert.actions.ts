@@ -20,3 +20,8 @@ export class AddAlertAction {
     static readonly type = '[Alert] Set alerts';
     constructor(public payload: Alert[]) {}
   }
+
+  export class ShowAlertsForHeroAction{
+    static readonly type = '[Alert] Show alerts for hero';
+    constructor(public payload: number) {}
+  }

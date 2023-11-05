@@ -18,7 +18,7 @@ export class NewAlertDialogComponent implements OnInit {
     name: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
     time: new FormControl('', Validators.required),
-    hero: new FormControl(undefined, Validators.required),
+    hero: new FormControl('', Validators.required),
   });
   @Select(HeroState.heroes) heroes$!: Observable<Hero[]>;
 

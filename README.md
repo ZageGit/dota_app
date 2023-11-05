@@ -7,7 +7,11 @@ Things to add
 husky git hooks
 unit tests
 proper backend
-linter
+linting
+only allow hero to be pinned once
+styling
+migrate to gitlab
+CI/CD
 ```
 
 ## Development server
