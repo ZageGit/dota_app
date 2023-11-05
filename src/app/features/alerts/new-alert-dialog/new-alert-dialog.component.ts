@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Select, Store } from '@ngxs/store';
 import { AddAlertAction } from '../store/alert.actions';
@@ -13,12 +13,12 @@ import { Hero } from 'src/app/models/hero';
   styleUrls: ['./new-alert-dialog.component.scss'],
 })
 export class NewAlertDialogComponent implements OnInit {
-  newAlertForm = new FormGroup({
-    id: new FormControl('', Validators.required),
-    name: new FormControl('', Validators.required),
-    description: new FormControl('', Validators.required),
-    time: new FormControl('', Validators.required),
-    hero: new FormControl('', Validators.required),
+  newAlertForm = new UntypedFormGroup({
+    id: new UntypedFormControl('', Validators.required),
+    name: new UntypedFormControl('', Validators.required),
+    description: new UntypedFormControl('', Validators.required),
+    time: new UntypedFormControl('', Validators.required),
+    hero: new UntypedFormControl('', Validators.required),
   });
   @Select(HeroState.heroes) heroes$!: Observable<Hero[]>;
 
